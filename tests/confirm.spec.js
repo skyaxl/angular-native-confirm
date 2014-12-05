@@ -3,7 +3,7 @@
 describe('Service: confirm', function () {
 
   // load the service's module
-  beforeEach(module('csk3App'));
+  beforeEach(module('angular-native-confirm'));
 
   // instantiate service
   var Confirm;
