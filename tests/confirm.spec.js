@@ -1,18 +1,22 @@
 'use strict';
-// THIS DOESN'T DO ANYTHING YET
+
 describe('Service: confirm', function () {
 
   // load the service's module
   beforeEach(module('angular-native-confirm'));
 
   // instantiate service
-  var Confirm;
-  beforeEach(inject(function (_Confirm_) {
+  var Confirm, window;
+  beforeEach(inject(function (_Confirm_, $window) {
     Confirm = _Confirm_;
+    window = $window;
+
+    spyOn(window, 'confirm');
   }));
 
-  it('should do something', function () {
-    expect(!!Confirm).toBe(true);
-  });
+  it('should do something', inject(function (Confirm) {
+    Confirm.action('Delete this user?');
+    expect(window.confirm).toHaveBeenCalled();
+  }));
 
 });
