@@ -3,7 +3,7 @@ angular-native-confirm
 
 A simple module for using window confirm
 
-```
+```javascript
 'use strict';
 
 angular.module('extremeChess', ['angular-native-confirm'])
