@@ -4,7 +4,7 @@ angular-native-confirm
 A simple module for using window confirm
 
 ```
-Confirm('Are you sure you want to delete this user?', function() {
+Confirm.action('Are you sure you want to delete this user?', function() {
   console.log('User clicked confirm');
   // $scope.deleteUser(1);
 }, function() {
