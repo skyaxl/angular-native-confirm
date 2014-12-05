@@ -18,3 +18,9 @@ angular.module('extremeChess', ['angular-native-confirm'])
     };
   });
 ```
+
+```html
+<button ng-click="deleteUser(user._id)">
+  Delete The SOB
+</button>
+```
